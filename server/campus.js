@@ -40,7 +40,7 @@ api.put('/:campusId', (req, res, next) => {
         .then((campus) => {
             campus.update(req.body)
                 .then((newCampus) => {
-                    res.json(campus);
+                    res.json(newCampus);
                 })
                 .catch(next)
         })
@@ -48,15 +48,17 @@ api.put('/:campusId', (req, res, next) => {
 })
 
 api.delete('/:campusId', (req, res, next) => {
-    Campus.destroy({
-        where: {
-            id: req.params.campusId
-        }
-    });
-    // .then(() => {
-    // 	res.redirect('/');
-    // })
-    // .catch(next);
+    Campus.findById(req.params.campusId)
+        .then(campus => {
+            const students = campus.getStudents();
+            campus.destroy();
+            return students;
+        })
+        .then(students => {
+            students.map( student => {
+                student.destroy()
+            })
+        });
 });
 
 module.exports = api;

@@ -46,7 +46,7 @@ api.put('/:studentId', (req, res, next) => {
         .catch(next);
 });
 
-api.delete('/studentId', (req, res, next) => {
+api.delete('/:studentId', (req, res, next) => {
     Student.destroy({
         where: {
             id: req.params.studentId

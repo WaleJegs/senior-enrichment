@@ -29,15 +29,7 @@ const Campus = db.define('campus', {
 });
 
 Student.belongsTo(Campus);
-Campus.hasMany(Student);
-
-
-for (let i = 0; i < 100; i++) {
-    Student.create({
-        name: Faker.name.findName(),
-        email: Faker.internet.email(),
-    })
-}
+Campus.hasMany(Student, { onDelete: 'CASCADE' });
 
 
 module.exports = {

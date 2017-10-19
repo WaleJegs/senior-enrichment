@@ -6,38 +6,15 @@ import axios from 'axios';
 import store from '../store';
 import { fetchStudents } from '../reducers/student';
 import { fetchCampuses } from '../reducers/campus';
+import { NavLink } from 'react-router-dom'
 
 export default class Home extends Component {
-    constructor(){
-        super()
-
-        // this.state = store.getState();
-        this.state = {campuses: [], students: []}
-    }
-
-
-    componentDidMount(){
-        // store.dispatch(fetchCampuses());
-        // store.dispatch(fetchStudents());
-        axios.get('api/students')
-        .then(res => res.data)
-        .then(students => {
-            this.setState({students: students})
-        })
-
-        axios.get('api/campuses')
-        .then(res => res.data)
-        .then(campuses => {
-            this.setState({campuses: campuses})
-        })
-    }
-
 
     render() {
         return (
         <div >
-           <CampusList campuses = {this.state.campuses} />
-           <StudentList students = {this.state.students} />
+          <h1> {'Welcome To International Interdisciplinary Academy'} </h1>
+          <img src={'Facade DH.JPG'} />
         </div>)
         }
     }
