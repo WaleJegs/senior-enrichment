@@ -32,7 +32,7 @@ export default class StudentList extends Component {
       <div>
         <div>
           <form onSubmit = {this.handleSubmit}>
-            <label> {'New Student'} </label>
+            <label> {'New Player'} </label>
             <br /> <br />
             <input value = {this.state.studentName} name = "studentName" placeholder={'Full Name'} onChange = {this.handleChange} />
             <br /> <br />

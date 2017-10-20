@@ -28,9 +28,9 @@ export default class CampusList extends Component {
       <div>
         <div>
           <form onSubmit = {this.handleSubmit}>
-            <label> {'New Campus'} </label>
+            <label> {'New Team'} </label>
             <br /> <br />
-            <input value = {this.state.campusName} name = "campusName" placeholder={'Name of Campus'} onChange = {this.handleChange} />
+            <input value = {this.state.campusName} name = "campusName" placeholder={'Name of Team'} onChange = {this.handleChange} />
             <br /> <br />
             <input value = {this.state.imageUrl} name = "imageUrl" placeholder={'Image Url'} onChange = {this.handleChange} />
             <br /> <br />

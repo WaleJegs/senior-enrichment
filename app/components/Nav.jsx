@@ -21,12 +21,12 @@ export default class Nav extends Component {
           </div>
           <div>
             <NavLink to="/campuses" component= {CampusList}>
-                <h2> {'Campuses'} </h2>
+                <h2> {'Teams'} </h2>
             </NavLink>
           </div>
           <div>
             <NavLink to="/students" component= {StudentList}>
-                <h2> {'Students'} </h2>
+                <h2> {'Players'} </h2>
             </NavLink>
           </div>
         </div>)

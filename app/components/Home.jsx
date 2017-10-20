@@ -13,8 +13,8 @@ export default class Home extends Component {
     render() {
         return (
         <div >
-          <h1> {'Welcome To International Interdisciplinary Academy'} </h1>
-          <img src={'Facade DH.JPG'} />
+          <h1> {'The NFL'} </h1>
+          <img src={'shield.JPG'} />
         </div>)
         }
     }

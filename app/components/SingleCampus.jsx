@@ -38,14 +38,14 @@ export default class SingleCampus extends Component{
     return (<div>
 
             <form onSubmit = {this.handleSubmitEdit}>
-              <label> {'Edit Campus'} </label> <br /> <br />
-              <input value = {this.state.campusName} name = "campusName" placeholder = {'Campus Name'} onChange = {this.handleChangeEdit} /> <br /> <br />
+              <label> {'Edit Team'} </label> <br /> <br />
+              <input value = {this.state.campusName} name = "campusName" placeholder = {'Team Name'} onChange = {this.handleChangeEdit} /> <br /> <br />
               <input value = {this.state.imageUrl} name = "imageUrl" placeholder = {'image url'} onChange = {this.handleChangeEdit} /> <br /> <br />
               <button type="submit"> {'EDIT'}</button> <br /> <br />
             </form>
 
             <form onSubmit = {this.handleSubmitAdd}>
-              <label> {'Add Student'} </label> <br /> <br />
+              <label> {'Add Player'} </label> <br /> <br />
               <input value = {this.state.studentName} name = "studentName" placeholder = {'Name'} onChange = {this.handleChangeAdd} /> <br /> <br />
               <input value = {this.state.email} name = "email" placeholder = {'Email'} onChange = {this.handleChangeAdd} /> <br /> <br />
               <button type="submit"> {'ADD'} </button> <br /> <br />
